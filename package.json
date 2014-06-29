@@ -1,0 +1,19 @@
+{
+  "name": "youpoop",
+  "version": "0.0.0",
+  "description": "stupid youtube look-alike",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "author": "ZifZaf",
+  "license": "ISC",
+  "devDependencies": {
+    "jshint": "*",
+    "should": "*",
+    "mocha": "*"
+  },
+  "dependencies": {
+    "express": "^4.4.4"
+  }
+}
