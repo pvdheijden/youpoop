@@ -4,6 +4,7 @@
   "description": "stupid youtube look-alike",
   "main": "index.js",
   "scripts": {
+	"start": "node index.js",
     "test": "make test"
   },
   "author": "ZifZaf",
