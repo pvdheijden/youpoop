@@ -4,17 +4,23 @@
   "description": "stupid youtube look-alike",
   "main": "index.js",
   "scripts": {
-	"start": "node index.js",
-    "test": "make test"
+    "start": "node index.js",
+    "test": "eslint --fix index.js && eslint --fix ./test/*.js && mocha --ui tdd"
   },
   "author": "ZifZaf",
   "license": "ISC",
   "devDependencies": {
-    "jshint": "*",
-    "should": "*",
+    "chai": "*",
+    "chai-http": "*",
+    "eslint": "^5.8.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
     "mocha": "*"
   },
   "dependencies": {
-    "express": "^4.4.4"
+    "express": "*"
   }
 }
