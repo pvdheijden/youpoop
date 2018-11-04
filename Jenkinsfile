@@ -19,4 +19,7 @@ pipeline {
       }
     }
   }
+  environment {
+    PORT = '3000'
+  }
 }
