@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "eslint --fix index.js && eslint --fix ./test/*.js && mocha --ui tdd"
+    "test": "eslint --fix index.js && mocha --ui tdd"
   },
   "author": "ZifZaf",
   "license": "ISC",
