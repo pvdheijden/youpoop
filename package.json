@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "eslint --fix index.js && mocha --ui tdd"
+    "test": "eslint --fix index.js && mocha --ui tdd --reporter mocha-junit-reporter"
   },
   "author": "ZifZaf",
   "license": "ISC",
@@ -18,7 +18,8 @@
     "eslint-plugin-node": "^8.0.0",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
-    "mocha": "*"
+    "mocha": "*",
+    "mocha-junit-reporter": "^1.18.0"
   },
   "dependencies": {
     "express": "*"
