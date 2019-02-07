@@ -14,13 +14,13 @@ pipeline {
     }
     stage('Test') {
       steps {
-        sh 'npm test'
+        sh 'npm test-junit'
       }
     }
   }
   post {
     always {
-      junit 'build/reports/**/*.xml'
+      junit '/test/**/*.xml'
     }
   }
 }

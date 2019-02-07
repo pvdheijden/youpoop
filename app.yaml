@@ -1,0 +1,15 @@
+runtime: php72
+
+entrypoint: serve index.php
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /(.+\.(gif|png|jpg|jpeg))$
+  static_files: \1
+  upload: .+\.(gif|png|jpg|jpeg)$
+
+- url: .*
+  script: auto

@@ -2,26 +2,24 @@
   "name": "youpoop",
   "version": "0.0.0",
   "description": "stupid youtube look-alike",
-  "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "eslint --fix index.js && mocha --ui tdd --reporter mocha-junit-reporter --reporter-options mochaFile=./build/reports/test-results.xml"
+    "test": "mocha --ui tdd",
+    "test-junit": "mocha --ui tdd --reporter mocha-junit-reporter --reporter-options mochaFile=./test/results.xml"
   },
   "author": "ZifZaf",
   "license": "ISC",
   "devDependencies": {
     "chai": "*",
-    "chai-http": "*",
-    "eslint": "^5.8.0",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-node": "^8.0.0",
-    "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-standard": "^4.0.0",
+    "chai-http": "^4.2.1",
+    "eslint": "*",
+    "eslint-config-standard": "*",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "*",
+    "eslint-plugin-standard": "*",
     "mocha": "*",
-    "mocha-junit-reporter": "^1.18.0"
+    "mocha-junit-reporter": "*",
+    "npm-cli": "^0.1.0"
   },
-  "dependencies": {
-    "express": "*"
-  }
+  "dependencies": {}
 }

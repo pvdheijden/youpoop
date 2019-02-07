@@ -1,0 +1,9 @@
+{
+  "require": {
+    "slim/slim": "^3",
+    "slim/php-view": "*",
+    "monolog/monolog": "*",
+    "google/cloud": "^0.93.0",
+    "google/appengine-php-sdk": "^1.9"
+  }
+}
