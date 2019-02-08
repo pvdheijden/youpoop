@@ -7,22 +7,36 @@
  */
 
 require_once __DIR__ . '/vendor/autoload.php';
-use google\appengine\api\cloud_storage\CloudStorageTools;
-use google\appengine\api\cloud_storage\CloudStorageException;
+require_once __DIR__ . '/inc/splash-image.php';
 
-$image_url = '/public/splash-screen.jpg';
-
+$image_url = '/public/splash-image.jpg';
 try {
-    $image_file = 'gs://youpoop/splash-screen.jpg';
-    $image_url = CloudStorageTools::getImageServingUrl($image_file /*, ['secure_url' => true]*/);
-    //$this->view->render($response, 'index.html', [ 'image_url' => $image_url ]);
+    $image_url = splash_image();
 } catch (Exception $e) {
     echo $e->getMessage();
 }
 
 ?>
 
-<h1>YouPoop</h1>
+<!DOCTYPE html>
+<html lang="nl">
 
-<img src="<?= $image_url?>" alt="splash-screen.jpg">
+<head title="YouPoop!">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <style>
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
 
+<body>
+
+    <img src="<?= $image_url?>" alt="splash-image.jpg" style="width:100%">
+
+</body>
+
+</html
