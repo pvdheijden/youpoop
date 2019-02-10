@@ -1,9 +1,12 @@
 {
   "require": {
-    "slim/slim": "^3",
+    "slim/slim": "^3.12",
     "slim/php-view": "*",
-    "monolog/monolog": "*",
-    "google/cloud": "^0.93.0",
-    "google/appengine-php-sdk": "^1.9"
+    "google/cloud-logging": "^1.14",
+    "google/cloud-storage": "^1.11",
+    "slim/http-cache": "^0.4.0"
+  },
+  "require-dev": {
+    "apix/log": "^1.2"
   }
 }

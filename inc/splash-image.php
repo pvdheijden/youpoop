@@ -8,12 +8,21 @@
 
 use Google\Cloud\Storage\StorageClient;
 
-function splash_image() {
-    $storage = new StorageClient();
+function splash_image(string $default) {
+    global $app;
+    $logger = $app->getContainer()->logger;
 
-    $bucket = $storage->bucket('youpoop');
-    $object = $bucket->object('splash-image.jpg');
+    $image_url = $default;
+    try {
+        $storage = new StorageClient();
 
-    return $object->info()['mediaLink'];
+        $bucket = $storage->bucket('youpoop');
+        $object = $bucket->object('splash-image.jpg');
+
+        $image_url = $object->info()['mediaLink'];
+    } catch (Exception $e) {
+        $logger->error($e->getMessage());
+    }
+
+    return $image_url;
 }
-
